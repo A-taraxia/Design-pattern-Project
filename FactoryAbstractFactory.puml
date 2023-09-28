@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Animal{
++speak()
+}
+
+class Dog{
++speak()
+}
+
+class Cat{
++speak()
+}
+
+class AnimalFactory{
++create_animal()
+}
+
+abstract class AbstractAnimalFactory{
++create_animal()
+}
+
+class DogFactory{
++ create_animal()
+}
+
+class CatFactory{
++ create_animal()
+}
+
+Dog-Cat
+Animal<-- Dog
+Animal<--Cat
+(Dog,Cat)-AnimalFactory
+AnimalFactory<--AbstractAnimalFactory
+AbstractAnimalFactory<-- DogFactory
+AbstractAnimalFactory<-- CatFactory
+@enduml
+

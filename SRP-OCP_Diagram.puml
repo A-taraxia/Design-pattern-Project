@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Dish{
+-name:string
+-price:float
++get_name()
++get_price()
+}
+
+class Order{
+-dishes:[]
++add_dish()
++remove_dish()
++calculate_total_price()
+}
+
+class ExternalPaymentProviderAdapter{
+-order:[]
++take_order()
++process_orders()
+}
+
+
+@enduml

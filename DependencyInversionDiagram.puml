@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class NotificationSenderInterface
+class EmailNotificationSender
+class SMSNotificationSender
+class NotificationManager
+
+NotificationSenderInterface <-- EmailNotificationSender
+NotificationSenderInterface <-- SMSNotificationSender
+NotificationSenderInterface <-- NotificationManager
+
+
+
+
+@enduml
